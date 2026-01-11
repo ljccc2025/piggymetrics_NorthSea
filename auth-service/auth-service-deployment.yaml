@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+  namespace: jenkins-k8s
+  labels:
+    app: auth-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      containers:
+      - name: auth-service
+        image: <image_name>
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000 #Dockerfile里的EXPOSE后的端口
+        env:
+        - name: CONFIG_SERVICE_PASSWORD
+          value: "$CONFIG_SERVICE_PASSWORD"
+        - name: NOTIFICATION_SERVICE_PASSWORD
+          value: $NOTIFICATION_SERVICE_PASSWORD
+        - name: STATISTICS_SERVICE_PASSWORD
+          value: $STATISTICS_SERVICE_PASSWORD
+        - name: ACCOUNT_SERVICE_PASSWORD
+          value: $ACCOUNT_SERVICE_PASSWORD
+        - name: MONGODB_PASSWORD
+          value: $MONGODB_PASSWORD
+
+
