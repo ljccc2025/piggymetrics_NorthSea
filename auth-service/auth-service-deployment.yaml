@@ -24,12 +24,6 @@ spec:
         env:
         - name: CONFIG_SERVICE_PASSWORD
           value: "$CONFIG_SERVICE_PASSWORD"
-        - name: NOTIFICATION_SERVICE_PASSWORD
-          value: $NOTIFICATION_SERVICE_PASSWORD
-        - name: STATISTICS_SERVICE_PASSWORD
-          value: $STATISTICS_SERVICE_PASSWORD
-        - name: ACCOUNT_SERVICE_PASSWORD
-          value: $ACCOUNT_SERVICE_PASSWORD
         - name: MONGODB_PASSWORD
           value: $MONGODB_PASSWORD
 
