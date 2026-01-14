@@ -1,0 +1,17 @@
+<settings>
+  <mirrors>
+    <mirror>
+      <id>nexus-myself</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://192.168.100.138:8081/repository/maven-public/</url>
+    </mirror>
+  </mirrors>
+
+  <servers>
+    <server>
+      <id>nexus-myself</id>
+      <username>admin</username>
+      <password>18407602091aA.!</password>
+    </server>
+  </servers>
+</settings>
