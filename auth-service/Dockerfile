@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM openjdk:8-jre
 MAINTAINER Alexander Lukyanchikov <sqshq@sqshq.com>
 
 ADD ./target/auth-service.jar /app/
